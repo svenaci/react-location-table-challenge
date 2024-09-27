@@ -104,6 +104,30 @@ function App() {
     });
   });
 
+  // const sortedData = useMemo(() => {
+  //   let newUsers = [...users];
+  //   if (sortConfig.key) {
+  //     newUsers.sort((userA, userB) => {
+  //       if (userA.location[sortConfig.key] < userB.location[sortConfig.key]) {
+  //         return sortConfig.direction === "ascending" ? -1 : 1;
+  //       }
+  //       if (userA.location[sortConfig.key] > userB.location[sortConfig.key]) {
+  //         return sortConfig.direction === "ascending" ? 1 : -1;
+  //       }
+  //       return 0;
+  //     });
+  //   }
+  //   return newUsers;
+  // }, [users, sortConfig]);
+
+  // const filteredData = useMemo(() => {
+  //   return sortedData.filter((user) => {
+  //     return keys.some((key) =>
+  //       user.location[key].toString().toLowerCase().includes(query)
+  //     );
+  //   });
+  // }, [sortedData, query]);
+
   useEffect(() => {
     (async () => {
       const response = await fetchData();
